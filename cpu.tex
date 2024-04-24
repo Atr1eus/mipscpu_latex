@@ -1,0 +1,176 @@
+% !Mode:: "TeX:UTF-8"
+%% 请使用 XeLaTeX 编译本文.
+% \documentclass{WHUBachelor}% 选项 forprint: 交付打印时添加, 避免彩色链接字迹打印偏淡. 即使用下一行:
+ \documentclass[forprint]{cpu}
+%---------------------这里添加所需的package--------------------------------
+\usepackage{url}
+
+%--------------------------------------------------------------------------
+\makeatletter
+\def\BState{\State\hskip-\ALG@thistlm}
+\makeatother
+\begin{document}
+%-----------------------------------------------------------------------------
+
+%%%%%%% 下面的内容, 据实填空.
+
+\Ccoursename{计算机设计实践} %课程名称
+\title{计算机设计实践} %实验名称 换行请使用\\
+\author{} % 学生姓名
+\Csupervisor{\quad} %指导教师一姓名、职称
+\CsupervisorAnother{无} %指导教师二姓名、职称
+\CstudentNum{} %学号
+\Cmajor{} % 专业名称
+%\Cschoolname{国家网络安全学院} % 学院名
+\date{二〇二X年X月} % 日期
+
+%-----------------------------------------------------------------------------
+
+\pdfbookmark[0]{封面}{title}         % 封面页加到 pdf 书签
+\maketitle
+\frontmatter
+\pagenumbering{Roman}              % 正文之前的页码用大写罗马字母编号.2019.6.16:更新 正文之前的页码隐藏，无需显示
+%-----------------------------------------------------------------------------
+\include{includefile/frontmatter}    % 加入摘要, 申明.
+%==========================把目录加入到书签==============================%%%%%%
+
+
+\tableofcontents
+\thispagestyle{empty}				%不显示罗马数字 ——zmx更新于2019.06.18
+\addtocontents{toc}{\protect\thispagestyle{empty}}
+
+
+
+
+\mainmatter %% 以下是正文
+%%%%%%%%%%%%%%%%%%%%%%%%%%%--------main matter-------%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{plain}%plain
+%\cfoot{\thepage{\zihao{5}\bf\usefonttimes}}
+%\renewcommand{\baselinestretch}{1.6}
+%\setlength{\baselineskip}{23pt}
+\baselineskip=23pt  % 正文行距为 23 磅
+
+%此处书写正文-------------------------------------------------------------------------------------
+
+
+\chapter{实验目的和意义}
+ 
+ \section{实验目的}
+
+ \begin{description}
+
+\item 本实验。。。。。。
+
+
+\end{description}
+%pdf 文件也可以反向搜索! \CJKunderwave{双击~pdf 中要修改的文字, 将直接跳转到源文件中相应位置.}
+%
+\chapter{实验环境介绍}
+
+\section{Verilog HDL}
+\section{MARS}
+\section{ModelSim}
+\section{Vivado}
+\section{Nexys4DDR}
+
+
+\chapter{概要设计}
+\section{总体设计}
+\begin{description}
+    \item （介绍你的CPU的总体情况，单周期还是多周期，多周期的状态机，支持的指令等）
+\end{description}
+
+
+\section{PC（程序计数器）（仿照PPT里的写法）}
+\subsection{功能描述}
+\subsection{模块接口}
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{|l|l|l|}
+    \hline
+        信号名 &  方向 & 描述 \\ \hline
+        ~ & ~ & ~ \\ \hline
+        ~ & ~ & ~ \\ \hline
+        ~ & ~ & ~ \\ \hline
+        ~ & ~ & ~ \\ \hline
+        ~ & ~ & ~ \\ \hline
+        ~ & ~ & ~ \\ \hline
+        ~ & ~ & ~ \\ \hline
+        ~ & ~ & ~ \\ \hline
+
+    \end{tabular}
+\end{table}
+\section{RF（寄存器文件）}
+\subsection{功能描述}
+\subsection{模块接口}
+
+
+\chapter{详细设计}
+\section{CPU总体结构}
+    （画出你的CPU总体结构图）
+\section{PC(程序计数器）（放代码和描述说明）}
+
+\section{RF（寄存器文件）}
+
+\chapter{测试结果及分析}
+\section{仿真代码及分析}
+\section{仿真测试结果}
+（展示指令执行结果）
+\section{下载测试代码及分析}
+\section{下载测试结果}
+
+\chapter{实验心得}
+（实验中遇到的问题，以及如何解决问题。）
+
+
+\include{includefile/backmatter} %%%结论
+
+
+%%%=== 参考文献 ========%%%
+\cleardoublepage\phantomsection
+\addcontentsline{toc}{chapter}{参考文献}
+\renewcommand{\baselinestretch}{1.6}
+\begin{thebibliography}{00}
+
+
+  \bibitem{r1} 李亚民.计算机原理与设计——Verilog HDL版[B].清华大学出版社，2011年6月
+
+
+
+\end{thebibliography}
+
+
+
+%%%-------------- 附录. 不需要可以删除.-----------
+
+
+\appendix
+%%%-------------- 教师评语评分 ------------------
+\begin{teacher}
+\thispagestyle{empty}
+评语: 
+\par
+\vspace*{12.5cm}
+\hspace*{7.5cm}评分: 
+\vspace*{1cm}
+
+\hspace*{7.3cm}评阅人:
+
+\vspace*{0.5cm}
+
+\hspace*{10.1cm}年\hspace*{1cm}月\hspace*{1cm}日
+
+\vspace*{0.5cm}
+
+{\songti \zihao{4} \makebox[1cm][s]{（备注：对该实验报告给予优点和不足的评价，并给出百分制评分。）}}
+
+\end{teacher}
+
+
+\cleardoublepage
+\end{document}
+
+
+
+
+
